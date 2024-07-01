@@ -1,0 +1,141 @@
+.game-modes {
+  width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 3rem;
+}
+
+.game-results {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5rem;
+  }
+  
+  .button-rules {
+    position: absolute;
+    right: 3rem;
+    bottom: 3rem;
+    background: none;
+    padding: 1rem 2rem;
+    width: 150px;
+    border: none;
+    border: 1px solid white;
+    border-radius: 0.5rem;
+    color: white;
+    cursor: pointer;
+  }
+  .game-items {
+    position: relative;
+    width: 340px;
+    height: 540px;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .game-items--simple {
+    background-image: url(../assets/images/bg-triangle.svg);
+  }
+  
+  .game-items--advanced {
+    background-image: url(../assets/images/bg-pentagon.svg);
+  }
+
+  .game-item {
+    --border-color: ;
+    --shadow: ;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    border: 15px solid var(--border-color);
+    box-shadow: 0 5px var(--shadow), inset 0 5px rgba(0, 0, 150, 0.1);
+    background-color: #fff;
+    transition: transform 0.2s;
+    cursor: pointer;
+    
+    &:hover::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      box-shadow: 0 0 20px 15px var(--border-color);
+      z-index: -1;
+    }
+  }
+  
+  .game-item--paper {
+    --border-color: var(--paper);
+    --shadow: var(--paper-shadow);
+  }
+  
+  .game-item--paper-simple {
+    top: 100px;
+    left: 0px;
+  }
+  
+  .game-item--paper-advanced {
+    top: 175px;
+    left: 250px;
+  }
+  
+  .game-item--scissors {
+    --border-color: var(--scissors);
+    --shadow: var(--scissors-shadow);
+  }
+  
+  .game-item--scissors-simple {
+    top: 100px;
+    right: 0;
+  }
+  
+  .game-item--scissors-advanced {
+    top: 50px;
+    left: 120px;
+  }
+  
+  .game-item--rock {
+    --border-color: var(--rock);
+    --shadow: var(--rock-shadow);
+  }
+  
+  .game-item--rock-simple {
+    top: 285px;
+    left: 120px;
+  }
+  
+  .game-item--rock-advanced {
+    top: 350px;
+    left: 225px;
+  }
+  
+  .game-item--lizard {
+    top: 350px;
+    left: 25px;
+    --border-color: var(--lizard);
+    --shadow: var(--lizard-shadow);
+  }
+  
+  .game-item--spock {
+    top: 175px;
+    left: -30px;
+    --border-color: var(--spock);
+    --shadow: var(--spock-shadow);
+  }
+  
+  .game-item--result {
+    position: static;
+  }
+  
+  .game-item__image {
+    width: 50px;
+    pointer-events: none;
+  }

@@ -1,8 +1,13 @@
 html {
   scroll-behavior: smooth;
 }
+
 body {
-  background-color: #111;
-  font-family: sans-serif;
-  color: white;
+  max-width: 900px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 3rem 0;
+  color: #fff;
+  background-image: var(--bg-gradient);
+  font-family: 'Barlow Semi Condensed', sans-serif;
 }
