@@ -35,19 +35,19 @@
     margin-right: auto;
     background-repeat: no-repeat;
     background-position: center;
+
+    &--simple {
+      background-image: url(../assets/images/bg-triangle.svg);
+    }
+    
+    &--advanced {
+      background-image: url(../assets/images/bg-pentagon.svg);
+    }
   }
   
-  .game-items--simple {
-    background-image: url(../assets/images/bg-triangle.svg);
-  }
   
-  .game-items--advanced {
-    background-image: url(../assets/images/bg-pentagon.svg);
-  }
 
   .game-item {
-    --border-color: ;
-    --shadow: ;
     position: absolute;
     display: flex;
     align-items: center;
@@ -70,72 +70,85 @@
       box-shadow: 0 0 20px 15px var(--border-color);
       z-index: -1;
     }
+
+    &--paper {
+      --border-color: var(--paper);
+      --shadow: var(--paper-shadow);
+  
+      &-simple {
+        top: 100px;
+        left: 0px;
+      }
+      
+      &-advanced {
+        top: 175px;
+        left: 250px;
+      }
+    }
+
+    &--scissors {
+      --border-color: var(--scissors);
+      --shadow: var(--scissors-shadow);
+  
+      &-simple {
+        top: 100px;
+        right: 0;
+      }
+      
+     &-advanced {
+        top: 50px;
+        left: 120px;
+      }
+    }
+    
+    
+    
+    &--rock {
+      --border-color: var(--rock);
+      --shadow: var(--rock-shadow);
+  
+      &-simple {
+        top: 285px;
+        left: 120px;
+      }
+      
+      &-advanced {
+        top: 350px;
+        left: 225px;
+      }
+    }
+
+    &--lizard {
+      top: 350px;
+      left: 25px;
+      --border-color: var(--lizard);
+      --shadow: var(--lizard-shadow);
+    }
+    
+    &--spock {
+      top: 175px;
+      left: -30px;
+      --border-color: var(--spock);
+      --shadow: var(--spock-shadow);
+    }
+    
+    &--result {
+      position: static;
+    }
+    
+    &__image {
+      width: 50px;
+      pointer-events: none;
+    }
   }
   
-  .game-item--paper {
-    --border-color: var(--paper);
-    --shadow: var(--paper-shadow);
-  }
   
-  .game-item--paper-simple {
-    top: 100px;
-    left: 0px;
-  }
   
-  .game-item--paper-advanced {
-    top: 175px;
-    left: 250px;
-  }
+ 
   
-  .game-item--scissors {
-    --border-color: var(--scissors);
-    --shadow: var(--scissors-shadow);
-  }
   
-  .game-item--scissors-simple {
-    top: 100px;
-    right: 0;
-  }
+ 
   
-  .game-item--scissors-advanced {
-    top: 50px;
-    left: 120px;
-  }
   
-  .game-item--rock {
-    --border-color: var(--rock);
-    --shadow: var(--rock-shadow);
-  }
   
-  .game-item--rock-simple {
-    top: 285px;
-    left: 120px;
-  }
   
-  .game-item--rock-advanced {
-    top: 350px;
-    left: 225px;
-  }
-  
-  .game-item--lizard {
-    top: 350px;
-    left: 25px;
-    --border-color: var(--lizard);
-    --shadow: var(--lizard-shadow);
-  }
-  
-  .game-item--spock {
-    top: 175px;
-    left: -30px;
-    --border-color: var(--spock);
-    --shadow: var(--spock-shadow);
-  }
-  
-  .game-item--result {
-    position: static;
-  }
-  
-  .game-item__image {
-    width: 50px;
-    pointer-events: none;
-  }
